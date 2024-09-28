@@ -1,0 +1,26 @@
+[package]
+name = "tree-sitter-lhaskell"
+description = "Lhaskell grammar for tree-sitter"
+version = "0.0.1"
+license = "MIT"
+readme = "README.md"
+keywords = ["incremental", "parsing", "tree-sitter", "lhaskell"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/gmatiukhin/hacky-tree-sitter-lhaskell"
+edition = "2021"
+autoexamples = false
+
+build = "bindings/rust/build.rs"
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter-language = "0.1"
+
+[dev-dependencies]
+tree-sitter = { version = "0.22" }
+
+[build-dependencies]
+cc = "1.0.87"

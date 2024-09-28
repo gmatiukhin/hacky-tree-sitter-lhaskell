@@ -1,0 +1,62 @@
+[
+  {
+    "type": "code",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "lhaskell",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "begin",
+          "named": true
+        },
+        {
+          "type": "code",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "lhaskell",
+          "named": true
+        },
+        {
+          "type": "tex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tex",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "begin",
+    "named": true
+  },
+  {
+    "type": "end",
+    "named": true
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "name": "lhaskell",
+  "rules": {
+    "source": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_lang"
+      }
+    },
+    "_lang": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "tex"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "lhaskell"
+        }
+      ]
+    },
+    "tex": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "SYMBOL",
+          "name": "_tex_statement"
+        }
+      }
+    },
+    "lhaskell": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "begin"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "code"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "begin": {
+      "type": "STRING",
+      "value": "\\begin{code}"
+    },
+    "end": {
+      "type": "STRING",
+      "value": "\\end{code}"
+    },
+    "code": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_haskell_statement"
+      }
+    },
+    "_tex_statement": {
+      "type": "SYMBOL",
+      "name": "_line"
+    },
+    "_haskell_statement": {
+      "type": "SYMBOL",
+      "name": "_line"
+    },
+    "_line": {
+      "type": "PATTERN",
+      "value": ".+"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
