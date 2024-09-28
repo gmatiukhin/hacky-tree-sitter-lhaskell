@@ -31,12 +31,9 @@ Don't forget to install the
 [tex parser] parsers too,
 as they are needed to parse different parts of the document.
 
-For some reason `nvim-treesitter` doesn't download the `injections.scm`
-and `highlights.scm` files, so you'll have to download them yourself and put them
-into `parsers` folder of your `nvim-treesitter` installation.
-If using [lazy.nvim] it should be in
-`~/.local/share/nvim/lazy/nvim-treesitter/queries/lhaskell`
-
+You would have to add injections and highlights manually though.
+Simply copy the contents of `queries`
+into `after/queries/lhaskell` in your `nvim` config folder.
 
 # How this works
 
